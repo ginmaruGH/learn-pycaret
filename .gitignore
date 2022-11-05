@@ -35,3 +35,6 @@ dask*/
 /.venv
 /.devcontainer
 tmp/
+
+# 追加
+nltk_data/
