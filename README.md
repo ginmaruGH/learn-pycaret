@@ -2,6 +2,7 @@
 
 - [PYCARET](https://pycaret.org/)
   - [PyCaret Official](https://pycaret.gitbook.io/docs/)
+- [PyCaret docs](https://pycaret.readthedocs.io/en/latest/index.html)
 - [pycaret/pycaret GitHub](https://github.com/pycaret/pycaret)
 - [PyCaret YouTube](https://www.youtube.com/channel/UCxA1YTYJ9BEeo50lxyI_B3g/featured)
 
