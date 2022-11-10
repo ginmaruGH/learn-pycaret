@@ -20,12 +20,13 @@ This page lists all the data preprocessing and transformation parameters in the 
     - [Feature Transform（特徴量変換）](#feature-transform特徴量変換)
     - [Target Transform（ターゲット変換）](#target-transformターゲット変換)
   - [Feature Engineering（特徴量エンジニアリング）](#feature-engineering特徴量エンジニアリング)
-    - [Feature Interaction（特徴量相互作用）](#feature-interaction特徴量相互作用)
-    - [Polynomial Features（）](#polynomial-features)
+    - [Feature Interaction（特徴量の相互作用）](#feature-interaction特徴量の相互作用)
+    - [Polynomial Features（多項式特徴量）](#polynomial-features多項式特徴量)
+    - [Trigonometry Features（三角法の特徴量）](#trigonometry-features三角法の特徴量)
     - [Group Features（グループの特徴量）](#group-featuresグループの特徴量)
     - [Bin Numeric Features（ビン数値特徴量）](#bin-numeric-featuresビン数値特徴量)
-    - [Combine Rare Levels（レアレベルを組み合わせる）](#combine-rare-levelsレアレベルを組み合わせる)
-    - [Create Clusters（クラスターを作成する）](#create-clustersクラスターを作成する)
+    - [Combine Rare Levels（レアレベルの組み合わせ）](#combine-rare-levelsレアレベルの組み合わせ)
+    - [Create Clusters（クラスターの作成）](#create-clustersクラスターの作成)
   - [Feature Selection（特徴量の選択）](#feature-selection特徴量の選択)
     - [Feature Selection（特徴量の選択）](#feature-selection特徴量の選択-1)
     - [Remove Multicollinearity（多重共線性の除去）](#remove-multicollinearity多重共線性の除去)
@@ -113,35 +114,43 @@ Target Transformation is similar to feature transformation as it will change the
 
 ## [Feature Engineering（特徴量エンジニアリング）](https://pycaret.gitbook.io/docs/get-started/preprocessing/feature-engineering)
 
-### [Feature Interaction（特徴量相互作用）]()
+### [Feature Interaction（特徴量の相互作用）](./02-03_feature_engineering.ipynb#feature_interaction)
 
 It is often seen in machine learning experiments when two features combined through an arithmetic operation become more significant in explaining variances in the data than the same two features separately.
 
 機械学習の実験では、2つの特徴量を演算によって組み合わせることで、同じ2つの特徴量を別々に扱うよりもデータの分散を説明する上で有意になることがよく見られます。
 
-### [Polynomial Features（）]()
+### [Polynomial Features（多項式特徴量）](./02-03_feature_engineering.ipynb#polynomial_feature)
 
-In machine learning experiments the relationship between the dependent and independent variable is often assumed as linear, however, this is not always the case. Sometimes the relationship between dependent and independent variables is more complex. Learn More.
+In machine learning experiments the relationship between the dependent and independent variable is often assumed as linear, however, this is not always the case. Sometimes the relationship between dependent and independent variables is more complex.
 
-### [Group Features（グループの特徴量）]()
+機械学習の実験では、従属変数と独立変数の関係は線形であると仮定されることが多いですが、常にそうであるとは限りません。従属変数と独立変数の関係はより複雑であることがあります。
+
+### [Trigonometry Features（三角法の特徴量）](./02-03_feature_engineering.ipynb#trigonometry_features)
+
+Similar to Polynomial Features, PyCaret also allows creating new trigonometry features from the existing features.
+
+多項式特徴量と同様に、PyCaretでも既存の特徴量から新しい三角法特徴量を作成できます。
+
+### [Group Features（グループの特徴量）](./02-03_feature_engineering.ipynb#group_features)
 
 When a dataset contains features that are related to each other in some way, for example, features recorded at some fixed time intervals, then new statistical features such as mean, median, variance, and standard deviation for a group of such features.
 
 データセットに、ある一定の時間間隔で記録された特徴量など、何らかの形で互いに関連する特徴量が含まれている場合、そのような特徴量のグループに対する平均、中央値、分散、標準偏差などの新しい統計的特徴量を提供します。
 
-### [Bin Numeric Features（ビン数値特徴量）]()
+### [Bin Numeric Features（ビン数値特徴量）](./02-03_feature_engineering.ipynb#bin_numeric_features)
 
 Feature binning is a method of turning continuous variables into categorical values using the pre-defined number of bins. It is effective when a continuous feature has too many unique values or few extreme values outside the expected range.
 
 特徴量のビン化とは、あらかじめ設定された数のビンを用いて連続変数をカテゴリ値に変換する方法です。連続特徴量に一意な値が多すぎる場合や、予想範囲外の極端な値が少ない場合に有効です。
 
-### [Combine Rare Levels（レアレベルを組み合わせる）]()
+### [Combine Rare Levels（レアレベルの組み合わせ）](./02-03_feature_engineering.ipynb#combine_rare_levels)
 
 Sometimes a dataset can have a categorical feature (or multiple categorical features) that has a very high number of levels (i.e. high cardinality features). If such feature (or features) are encoded into numeric values, then the resultant matrix is a sparse matrix.
 
 データセットには、非常に多くのレベルを持つカテゴリカル特徴量（または複数のカテゴリカル特徴量）がある場合もあります（すなわち、高基準の特徴量）。このような特徴量を数値に置き換えると、結果として得られる行列は疎行列となります。
 
-### [Create Clusters（クラスターを作成する）]()
+### [Create Clusters（クラスターの作成）](./02-03_feature_engineering.ipynb#)
 
 Creating Clusters using the existing features from the data is an unsupervised ML technique to engineer and create new features.
 
