@@ -25,3 +25,6 @@
 [Iterative Imputation in PyCaret 2.2 part 2 - real life data](https://www.linkedin.com/pulse/iterative-imputation-pycaret-22-part-2-real-life-data-antoni-baum/)
 
 [【説明可能性】PyCarat+SHAPで特徴量の寄与度を可視化してみた。](【説明可能性】PyCarat+SHAPで特徴量の寄与度を可視化してみた。)
+
+
+[Creating the Whole Machine Learning Pipeline with PyCaret](https://www.datasource.ai/uploads/624e8836466a40923b64b901b5050c0f.html)

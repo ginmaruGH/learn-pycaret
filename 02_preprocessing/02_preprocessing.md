@@ -97,13 +97,13 @@ Normalization is a technique often applied as part of data preparation for machi
 
 正規化とは、機械学習のためのデータ準備の一環としてしばしば適用される手法です。正規化の目的は、データセットの数値列の値を、値の範囲の違いを歪めることなく再スケール化することです。
 
-### [Feature Transform（特徴量変換）](02-02_scale_and_transform.ipynb#)
+### [Feature Transform（特徴量変換）](02-02_scale_and_transform.ipynb#feature_transform)
 
 While normalization rescales the data within new limits to reduce the impact of magnitude in the variance, Feature transformation is a more radical technique. Transformation changes the shape of the distribution.
 
 正規化とはデータを新しい範囲に再尺度化し、分散の大きさの影響を小さくすることです。特徴量変換はより根本的な手法です。分布の形状を変化させます。
 
-### [Target Transform（ターゲット変換）](02-02_scale_and_transform.ipynb#)
+### [Target Transform（ターゲット変換）](02-02_scale_and_transform.ipynb#target_transform)
 
 Target Transformation is similar to feature transformation as it will change the shape of the distribution of the target variable instead of the features.
 
