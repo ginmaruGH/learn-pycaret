@@ -46,43 +46,43 @@ Datasets for various reasons may have missing values or empty records, often enc
 
 データセットにはさまざまな理由で欠損値や空のレコードがあり、しばしば空白やNaNとしてエンコードされます。機械学習アルゴリズムの多くは、このような欠損値を扱うことができません。
 
-### [Data Types（データ型）](02-01_data_preparation.ipynb#data_types)
+### [Data Types（データ型）](./02-01_data_preparation.ipynb#data_types)
 
 Each feature in the dataset has an associated data type such as numeric, categorical, or Datetime. PyCaret automatically detects the data type of each feature.
 
 データセット内の特徴量には、Numeric、Categorical、Datetime などのデータ型が関連付けられています。PyCaret は各特徴のデータ型を自動的に検出します。
 
-### [One-Hot Encoding（ワンホットエンコーディング）](02-01_data_preparation.ipynb#one_hot_encoding)
+### [One-Hot Encoding（ワンホットエンコーディング）](./02-01_data_preparation.ipynb#one_hot_encoding)
 
 Categorical features in the dataset contain the label values (ordinal or nominal) rather than continuous numbers. Most of the machine learning algorithms are not capable of handling categorical data without encoding.
 
 データセット中のカテゴリ特徴量には、連続数ではなくラベル値（順序または名義）が含まれます。機械学習アルゴリズムの多くは、エンコーディングを行わないとカテゴリデータを扱うことができません。
 
-### [Ordinal Encoding（順序エンコーディング）](02-01_data_preparation.ipynb#ordinal_encoding)
+### [Ordinal Encoding（順序エンコーディング）](./02-01_data_preparation.ipynb#ordinal_encoding)
 
 When the categorical features in the dataset contain variables with intrinsic natural order such as Low, Medium, and High, these must be encoded differently than nominal variables (where there is no intrinsic order for e.g. Male or Female).
 
 データセット内のカテゴリ特徴量にLow, Medium, Highのような自然順位を持つ変数がある場合、名目変数（男性、女性などの自然順位のない変数）とは異なる方法でエンコードする必要があります。
 
-### [Cardinal Encoding（基本エンコーディング）](02-01_data_preparation.ipynb#cardinal_encoding)
+### [Cardinal Encoding（基本エンコーディング）](./02-01_data_preparation.ipynb#cardinal_encoding)
 
 When categorical features in the dataset contain variables with many levels (also known as high cardinality features), then typical One-Hot Encoding leads to the creation of a very large number of new features.
 
 データセット内のカテゴリ特徴量が多値の変数（高基準特徴量）を含む場合、従来のOne-Hot Encodingでは非常に多くの新規特徴量を生成してしまいます。
 
-### [Handle Unknown Levels（未知のレベルの扱い）](02-01_data_preparation.ipynb#handle_unknown_levels)
+### [Handle Unknown Levels（未知のレベルの扱い）](./02-01_data_preparation.ipynb#handle_unknown_levels)
 
 When categorical features in the dataset contain unseen variables at the time of predictions, it may cause problems for the trained model as those levels were not present at the time of training.
 
 データセット内のカテゴリ特徴量が予測時に未知の変数が含まれる場合、学習時にそのレベルが存在しないため、学習済みモデルに問題が生じることもあります。
 
-### [Target Imbalance（ターゲット不均衡）](02-01_data_preparation.ipynb#target_imbalance)
+### [Target Imbalance（ターゲット不均衡）](./02-01_data_preparation.ipynb#target_imbalance)
 
 When the training dataset has an unequal distribution of target class it can be fixed using the `fix_imbalance` parameter in the setup.
 
 学習データセットにターゲットクラスの不均衡がある場合、セットアップの `fix_imbalance` パラメータで修正できます。
 
-### [Remove Outliers（外れ値の除去）](02-01_data_preparation.ipynb#remove_outliers)
+### [Remove Outliers（外れ値の除去）](./02-01_data_preparation.ipynb#remove_outliers)
 
 The `remove_outliers` function in PyCaret allows you to identify and remove outliers from the dataset before training the model.
 
@@ -92,19 +92,19 @@ PyCaretの `remove_outliers` 関数を使うと、モデルを学習する前に
 
 ## [Scale and Transform（尺度と変換）](https://pycaret.gitbook.io/docs/get-started/preprocessing/scale-and-transform)
 
-### [Normalize（正規化）](02-02_scale_and_transform.ipynb#normalize)
+### [Normalize（正規化）](./02-02_scale_and_transform.ipynb#normalize)
 
 Normalization is a technique often applied as part of data preparation for machine learning. The goal of normalization is to rescale the values of numeric columns in the dataset without distorting the differences in the ranges of values.
 
 正規化とは、機械学習のためのデータ準備の一環としてしばしば適用される手法です。正規化の目的は、データセットの数値列の値を、値の範囲の違いを歪めることなく再スケール化することです。
 
-### [Feature Transform（特徴量変換）](02-02_scale_and_transform.ipynb#feature_transform)
+### [Feature Transform（特徴量変換）](./02-02_scale_and_transform.ipynb#feature_transform)
 
 While normalization rescales the data within new limits to reduce the impact of magnitude in the variance, Feature transformation is a more radical technique. Transformation changes the shape of the distribution.
 
 正規化とはデータを新しい範囲に再尺度化し、分散の大きさの影響を小さくすることです。特徴量変換はより根本的な手法です。分布の形状を変化させます。
 
-### [Target Transform（ターゲット変換）](02-02_scale_and_transform.ipynb#target_transform)
+### [Target Transform（ターゲット変換）](./02-02_scale_and_transform.ipynb#target_transform)
 
 Target Transformation is similar to feature transformation as it will change the shape of the distribution of the target variable instead of the features.
 
@@ -150,7 +150,7 @@ Sometimes a dataset can have a categorical feature (or multiple categorical feat
 
 データセットには、非常に多くのレベルを持つカテゴリカル特徴量（または複数のカテゴリカル特徴量）がある場合もあります（すなわち、高基準の特徴量）。このような特徴量を数値に置き換えると、結果として得られる行列は疎行列となります。
 
-### [Create Clusters（クラスターの作成）](./02-03_feature_engineering.ipynb#)
+### [Create Clusters（クラスターの作成）](./02-03_feature_engineering.ipynb#create_clusters)
 
 Creating Clusters using the existing features from the data is an unsupervised ML technique to engineer and create new features.
 
@@ -160,25 +160,25 @@ Creating Clusters using the existing features from the data is an unsupervised M
 
 ## [Feature Selection（特徴量の選択）](https://pycaret.gitbook.io/docs/get-started/preprocessing/feature-selection)
 
-### [Feature Selection（特徴量の選択）]()
+### [Feature Selection（特徴量の選択）](./02-04_feature_selection.ipynb#feature_selection)
 
 Feature Selection is a process used to select features in the dataset that contributes the most in predicting the target variable. Working with selected features instead of all the features reduces the risk of over-fitting, improves accuracy, and decreases the training time.
 
 特徴量選択とは、データセットの中からターゲット変数の予測にもっとも貢献する特徴を選択するためのプロセスです。すべての特徴量ではなく、選択された特徴量で作業を行うことで、オーバーフィットのリスクを減らし精度を向上させ、学習時間を短縮できます。
 
-### [Remove Multicollinearity（多重共線性の除去）]()
+### [Remove Multicollinearity（多重共線性の除去）](./02-04_feature_selection.ipynb#remove_multicollinearity)
 
 Multicollinearity (also called collinearity) is a phenomenon in which one feature variable in the dataset is highly linearly correlated with another feature variable in the same dataset.
 
 多重共線性（共線性ともいう）とは、データセット内のある特徴変数が、同じデータセット内の別の特徴変数と高い線形相関を持つ現象のことです。
 
-### [Principal Component Analysis（主成分分析）]()
+### [Principal Component Analysis（主成分分析）](./02-04_feature_selection.ipynb#principal_component_analysis)
 
 Principal Component Analysis (PCA) is an unsupervised technique used in machine learning to reduce the dimensionality of the data. It does so by compressing the feature space.
 
 主成分分析（PCA）は、機械学習においてデータの次元を減らすために用いられる教師なし手法です。これは、特徴空間を圧縮することによって行われます。
 
-### [Ignore Low Variance（分散が小さい場合は無視する）]()
+### [Ignore Low Variance（分散が小さい場合は無視する）](./02-04_feature_selection.ipynb#ignore_low_variance)
 
 Sometimes a dataset may have a categorical feature with multiple levels, where the distribution of such levels is skewed and one level may dominate over other levels.
 
@@ -188,25 +188,25 @@ Sometimes a dataset may have a categorical feature with multiple levels, where t
 
 ## [Other setup parameters（その他の設定パラメータ）](https://pycaret.gitbook.io/docs/get-started/preprocessing/other-setup-parameters)
 
-### [Required Parameters（必須パラメータ）]()
+### [Required Parameters（必須パラメータ）](./02-05_other_setup_parameters.ipynb#required_parameters)
 
 There are only two non-optional parameters in the setup function i.e. data and name of the target variable.
 
 set 関数のオプションでないパラメータは、データとターゲット変数の名前の2つだけです。
 
-### [Experiment Logging（実験ログの記録）]()
+### [Experiment Logging（実験ログの記録）](./02-05_other_setup_parameters.ipynb#experiment_logging)
 
 PyCaret uses MLflow for experiment tracking. A parameter in the setup can be set to automatically track all the metrics, hyperparameters, and other model artifacts.
 
 PyCaretは実験のトラッキングにMLflowを使用しています。セットアップのパラメータを設定することで、すべてのメトリクス、ハイパーパラメータ、その他のモデルの成果物を自動的に追跡できます。
 
-### [Model Selection（モデル選択）]()
+### [Model Selection（モデル選択）](./02-05_other_setup_parameters.ipynb#model_selection)
 
 Parameters in the setup can be used for setting parameters for the model selection process. These are not related to data preprocessing but can influence your model selection process.
 
 セットアップのパラメータは、モデル選択プロセスのパラメータ設定に使用できます。これらはデータの前処理とは関係ありませんが、モデル選択処理に影響を与えることがあります。
 
-### [Other Miscellaneous（その他雑多なもの）]()
+### [Other Miscellaneous（その他雑多なもの）](./02-05_other_setup_parameters.ipynb#other_miscellaneous)
 
 Other miscellaneous parameters in the setup that are used for controlling experiment settings such as using GPU for training or setting verbosity of the experiment
 
